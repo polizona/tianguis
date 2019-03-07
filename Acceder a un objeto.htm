@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Acceder a los elementos de un objeto</p>
+
+<p id="demo"></p>
+
+<script>
+var objeto = "";
+objeto = {"boleta":"2010601111",
+  "balance":{"activo":{"bancos":125,"insumoA":454},
+             "pasivo":{"proveedores":125}
+            }
+  };
+
+document.getElementById("demo").innerHTML = 
+"boleta: "+ objeto.boleta + "<br>" 
++ "bancos: "+ objeto.balance.activo.bancos + "<br>"
++ "insumoA: "+objeto.balance.activo.insumoA + "<br>"
++ "proveedores: "+objeto.balance.pasivo.proveedores + "<br>";
+</script>
+
+</body>
+</html>
