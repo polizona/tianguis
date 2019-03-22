@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="//xbd">
+<html><body>
+<xsl:for-each select="child::*/disenio"> <br/>
+<xsl:for-each select="child::*"> <br/>
+    CREATE TABLE <xsl:value-of select="name(.)"/>
+      ( <xsl:for-each select="child::*">
+        <xsl:value-of select="name(.)"/>         
+       <xsl:choose>
+            <xsl:when test="@tipo='entero'"> int</xsl:when>
+             <xsl:when test="@tipo='texto'"> text</xsl:when>
+             <xsl:when test="@tipo='logico'"> boolean</xsl:when>
+             <xsl:when test="@tipo='decimal'"> double</xsl:when>
+             <xsl:when test="@tipo='fecha'"> date</xsl:when>
+       <xsl:otherwise>
+           ninguno
+      </xsl:otherwise>       
+</xsl:choose>,  
+</xsl:for-each>
+
+
+  PRIMARY KEY (
+<xsl:for-each select="*">
+<xsl:if test="@primaria='si'">
+<xsl:value-of select="name(.)"/>
+</xsl:if>
+     <xsl:if test="following-sibling::*/@primaria='si'">, </xsl:if>
+</xsl:for-each>
+));
+</xsl:for-each> <br/>
+<xsl:for-each select="child::*">
+drop table <xsl:value-of select="name(.)"/> ;
+</xsl:for-each>
+
+</xsl:for-each>
+
+<xsl:for-each select="child::*/datos"> <br/>
+<xsl:for-each select="child::*">
+INSERT INTO <xsl:value-of select="name(.)"/> VALUES
+      (<xsl:for-each select="child::*">
+       '<xsl:value-of select="."/>'
+       <xsl:if test="following-sibling::*">,</xsl:if>
+</xsl:for-each>);<br/></xsl:for-each><br/><br/>
+</xsl:for-each>
+
+</xsl:for-each>
+</body> </html>
+</xsl:template>
+</xsl:stylesheet>
