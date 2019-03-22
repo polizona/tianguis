@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xbd>
+<tianguis>
+<disenio>
+<industria>
+<idindustria primaria="si" tipo="entero"/>
+<nbindustria tipo="texto"/>
+</industria>
+<encadenamiento>
+<idcompradora primaria="si" tipo="entero"/>
+<idvendedora primaria="si" tipo="entero"/>
+<coeficiente tipo="decimal"/>
+</encadenamiento>
+<rubro>
+<idrubro primaria="si" tipo="entero"/>
+<nbrubro tipo="texto"/>
+</rubro>
+<cuenta>
+<idcuenta primaria="si" tipo="entero"/>
+<nbcuenta tipo="texto"/>
+<idrubro foranea="si" tipo="entero"/>
+</cuenta>
+<tipoalmacen>
+<idtipoalmacen primaria="si" tipo="entero"/>
+<nbtipoalmacen tipo="texto"/>
+</tipoalmacen>
+<empresa>
+<idempresa primaria="si" tipo="entero"/>
+<nbempresa tipo="texto"/>
+<idindustria foranea="si" tipo="entero"/>
+</empresa>
+<ultimasincro>
+<idempresa primaria="si" tipo="entero"/>
+<fecsincro tipo="fecha"/>
+</ultimasincro>
+<balance>
+<idempresa primaria="si" tipo="entero"/>
+<fecbalance primaria="si" tipo="fecha"/>
+<idcuenta primaria="si" tipo="entero"/>
+<saldo tipo="decimal"/>
+<fecsincro foranea="si" tipo="fecha"/>
+</balance>
+<almacen>
+<idempresa primaria="si" tipo="entero"/>
+<idalmacen primaria="si" tipo="entero"/>
+<idtipoalmacen foranea="si" tipo="entero"/>
+<maximo tipo="decimal"/>
+<fecsincro foranea="si" tipo="fecha"/>
+</almacen>
+<controlalmacen>
+<idempresa primaria="si" tipo="entero"/>
+<idalmacen primaria="si" tipo="entero"/>
+<deseado tipo="decimal"/>
+<actual tipo="decimal"/>
+<minimo tipo="decimal"/>
+</controlalmacen>
+
+<embarque>
+
+
+</embarque>
+
+</disenio>
+<datos>
+<usuarios>
+<idusuario>25</idusuario>
+<nbusuario>profe</nbusuario>
+</usuarios>
+<ontologias>
+<idusuario>25</idusuario>
+<idontologia>2</idontologia>
+<nbontologia>tianguis</nbontologia>
+</ontologias>
+</datos>
+</tianguis>
+<xbd>
