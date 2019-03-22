@@ -96,6 +96,36 @@
 <idtipoalmacen>4</idtipoalmacen>
 <nbtipoalmacen>mercancias</nbtipoalmacen>
 </tipoalmacen>
+<industria>
+<idindustria>1</idindustria>
+<nbindustria>industria A</nbindustria>
+</industria>
+<industria>
+<idindustria>2</idindustria>
+<nbindustria>industria B</nbindustria>
+</industria>
+<industria>
+<idindustria>3</idindustria>
+<nbindustria>industria C</nbindustria>
+</industria>
+<industria>
+<idindustria>4</idindustria>
+<nbindustria>industria D</nbindustria>
+</industria>
+<industria>
+<idindustria>5</idindustria>
+<nbindustria>industria E</nbindustria>
+</industria>
+<industria>
+<idindustria>6</idindustria>
+<nbindustria>industria F</nbindustria>
+</industria>
+<encadenamiento>
+<idcompradora></idcompradora>
+<idvendedora></idvendedora>
+<coeficiente></coeficiente>
+</encadenamiento>
+
 
 
 
